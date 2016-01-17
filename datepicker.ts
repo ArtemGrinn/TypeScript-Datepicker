@@ -20,9 +20,7 @@ class DatePicker {
         this.inputElement.parentNode.insertBefore(this.container, this.inputElement.nextSibling)
         this.Build();
         this.InputEventHandler();
-        this.ChooseDateEventHandler();
-        this.NextEventHandler();
-        this.PrevEventHandler();
+        this.CalendarClickEventHandler();
         this.OutsideClickEventHandler();
     }
     
@@ -91,36 +89,22 @@ class DatePicker {
         });
     }
     
-    private ChooseDateEventHandler(): void {
+    private CalendarClickEventHandler(): void {
         this.container.addEventListener("click", (e: Event)=>{
             e.stopPropagation();
             var target = <HTMLElement>(e.target || e.srcElement);
             if(target.tagName.toLowerCase() == "td" && parseInt(target.innerHTML)){
                 this.inputElement.value = this.GetFullDate(parseInt(target.innerHTML));
                 this.Close();
-            }            
-        });
-    }
-    
-    private NextEventHandler(): void {
-        this.container.addEventListener("click", (e: Event)=>{
-            e.stopPropagation();
-            var target = <HTMLElement>(e.target || e.srcElement);
+            }         
             if(target.classList.contains("next")){
                 this.month++;   
                 this.Build();  
-            }          
-        });
-    }
-    
-    private PrevEventHandler(): void {
-        this.container.addEventListener("click", (e: Event)=>{
-            e.stopPropagation();
-            var target = <HTMLElement>(e.target || e.srcElement);
+            }      
             if(target.classList.contains("prev")){
                 this.month--;   
                 this.Build()     
-            }            
+            } 
         });
     }
     
