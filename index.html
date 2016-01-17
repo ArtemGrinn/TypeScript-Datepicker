@@ -2,7 +2,46 @@
 <html>
     <head>
         <title>TypeScript DatePicker</title>
+        <meta charset="utf-8">
         <style>
+
+            td,
+            th {
+                border-bottom: 1px solid silver;
+                padding: 5px;
+                text-align: center;
+            }
+            th {
+                font-size: 12px;
+                border-bottom: none;
+            }
+            .today{
+                background-color: #E6E6E6;
+            }
+            .unavailable{
+                color: #E6E6E6;
+            }
+            .hide{
+               display: none;
+            }
+            .datepicker{
+                position: relative;
+            }
+            .datepicker > table{
+                position: absolute;
+                background: #fff;
+                border-collapse: collapse;
+                border: 1px solid silver;
+                border-top: none;
+                font-family: arial;
+            }
+            .datepicker > table > caption{
+                text-align: center;
+                background: #fff;
+                border: 1px solid silver;
+                border-bottom: none;
+                padding: 5px;
+            }
             
         </style>
     </head>
@@ -10,13 +49,11 @@
         <h1>TypeScript DatePicker</h1>
         <label>Choose date:</label>
         <input type="text" data-control="datepicker"> 
-        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque possimus cumque, repellat laudantium, accusamus quaerat itaque cum dolorum, excepturi deserunt ullam maiores incidunt ad labore. Iusto, quam. Sequi, nostrum, similique.</p>
         <script>
-            window.onload = function() {
-                debugger
+            window.onload = function() {                
                 var inputs = document.querySelectorAll("input[data-control=datepicker]");
-                            [].forEach.call(inputs, function(input){
-                                debugger
+                            [].forEach.call(inputs, function(input){                                
                                 new DatePicker(input);
                             });
             };            
