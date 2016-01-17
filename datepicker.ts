@@ -1,3 +1,6 @@
+// Simple datepicker
+// Author: Artem Grinn, grinn.art@gmail.com
+
 class DatePicker {
     private inputElement: HTMLInputElement;
     private container: HTMLElement;
