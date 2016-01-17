@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TypeScript DatePicker</title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <h1>TypeScript DatePicker</h1>
+        <label>Choose date:</label>
+        <input type="text" data-control="datepicker"> 
+        
+        <script>
+            window.onload = function() {
+                debugger
+                var inputs = document.querySelectorAll("input[data-control=datepicker]");
+                            [].forEach.call(inputs, function(input){
+                                debugger
+                                new DatePicker(input);
+                            });
+            };            
+        </script>
+        <script src="datepicker.js"></script>
+    </body>
+</html>
