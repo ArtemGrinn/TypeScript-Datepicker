@@ -44,8 +44,9 @@ class DatePicker {
         [].forEach.call(this.days, (day: string) => {
             table += '<th>' + day + '</th>';
         });
-        table += '</tr>';
+        table += '</tr><tr>';
         
+        // пустыe ячейки
         for (var i = 0; i < this.GetDayNumber(d); i++) {
             table += '<td></td>';
         }
