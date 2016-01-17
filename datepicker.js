@@ -1,3 +1,5 @@
+// Simple datepicker
+// Author: Artem Grinn, grinn.art@gmail.com
 var DatePicker = (function () {
     function DatePicker(element) {
         this.days = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
