@@ -5,16 +5,7 @@
         <meta charset="utf-8">
         <style>
 
-            td,
-            th {
-                border-bottom: 1px solid silver;
-                padding: 5px;
-                text-align: center;
-            }
-            th {
-                font-size: 12px;
-                border-bottom: none;
-            }
+          
             .today{
                 background-color: #E6E6E6;
             }
@@ -27,7 +18,7 @@
             .datepicker{
                 position: relative;
             }
-            .datepicker > table{
+            .datepicker table{
                 position: absolute;
                 background: #fff;
                 border-collapse: collapse;
@@ -35,7 +26,17 @@
                 border-top: none;
                 font-family: arial;
             }
-            .datepicker > table > caption{
+            .datepicker td,
+            .datepicker th {
+                border-bottom: 1px solid silver;
+                padding: 5px;
+                text-align: center;
+            }
+            .datepicker th {
+                font-size: 12px;
+                border-bottom: none;
+            }
+            .datepicker caption{
                 text-align: center;
                 background: #fff;
                 border: 1px solid silver;
