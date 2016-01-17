@@ -13,9 +13,7 @@ var DatePicker = (function () {
         this.inputElement.parentNode.insertBefore(this.container, this.inputElement.nextSibling);
         this.Build();
         this.InputEventHandler();
-        this.ChooseDateEventHandler();
-        this.NextEventHandler();
-        this.PrevEventHandler();
+        this.CalendarClickEventHandler();
         this.OutsideClickEventHandler();
     }
     DatePicker.prototype.Close = function () {
@@ -74,7 +72,7 @@ var DatePicker = (function () {
             _this.container.classList.toggle("hide");
         });
     };
-    DatePicker.prototype.ChooseDateEventHandler = function () {
+    DatePicker.prototype.CalendarClickEventHandler = function () {
         var _this = this;
         this.container.addEventListener("click", function (e) {
             e.stopPropagation();
@@ -83,24 +81,10 @@ var DatePicker = (function () {
                 _this.inputElement.value = _this.GetFullDate(parseInt(target.innerHTML));
                 _this.Close();
             }
-        });
-    };
-    DatePicker.prototype.NextEventHandler = function () {
-        var _this = this;
-        this.container.addEventListener("click", function (e) {
-            e.stopPropagation();
-            var target = (e.target || e.srcElement);
             if (target.classList.contains("next")) {
                 _this.month++;
                 _this.Build();
             }
-        });
-    };
-    DatePicker.prototype.PrevEventHandler = function () {
-        var _this = this;
-        this.container.addEventListener("click", function (e) {
-            e.stopPropagation();
-            var target = (e.target || e.srcElement);
             if (target.classList.contains("prev")) {
                 _this.month--;
                 _this.Build();
