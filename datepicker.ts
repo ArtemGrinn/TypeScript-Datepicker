@@ -86,6 +86,7 @@ class DatePicker {
     private InputEventHandler(): void {
         this.inputElement.addEventListener("click", (e: Event)=>{
             e.stopPropagation();
+   
             this.container.classList.toggle("hide");
         });
     }
