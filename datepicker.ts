@@ -88,7 +88,11 @@ class DatePicker {
     private InputEventHandler(): void {
         this.inputElement.addEventListener("click", (e: Event)=>{
             e.stopPropagation();
-   
+            var top = this.inputElement.offsetTop;
+            var left = this.inputElement.offsetLeft;
+            var height = this.inputElement.offsetHeight;
+            this.container.style.top = (top + height) + "px";
+            this.container.style.left = left + "px";
             this.container.classList.toggle("hide");
         });
     }
