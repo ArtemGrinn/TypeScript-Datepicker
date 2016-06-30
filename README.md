@@ -1,2 +1,2 @@
 # VanillaJS Datepicker
-Simple datepicker on TypeScript
+Simple TypeScript datepicker 
